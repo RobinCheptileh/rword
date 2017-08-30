@@ -1,5 +1,7 @@
 # Rword
 
+[![Gem Version](https://badge.fury.io/rb/rword.svg)](https://badge.fury.io/rb/rword)
+
 Rword is a ruby gem that generates all possible english words from a set of letters and a specified limit. 
 
 ## Installation
