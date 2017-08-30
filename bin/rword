@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "rword"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+
+# require "irb"
+# IRB.start(__FILE__)
+if ARGV.length == 3
+  english = case ARGV[2].downcase
+            when 'true' then
+              true
+            when 'false' then
+              false
+            else
+              true
+            end
+  puts Rword::Worder.generate(ARGV[0].strip, ARGV[1].strip.to_i, english)
+elsif ARGV.length == 2
+  puts Rword::Worder.generate(ARGV[0].strip, ARGV[1].strip.to_i)
+else
+  ARGV.clear
+  print 'Enter word: '
+  letters = gets.strip
+  print 'Enter limit: '
+  limit = gets.strip.to_i
+  print 'Generate English words only? [Y/N]'
+  choice = gets.strip.downcase
+  english_only = case choice
+                 when 'y' then
+                   true
+                 when 'n' then
+                   false
+                 else
+                   true
+                 end
+  puts Rword::Worder.generate(letters, limit, english_only)
+end
