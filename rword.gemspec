@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Generate possible english words.}
   spec.description   = %q{Generate all possible english words from a set of letters and a specified limit}
   spec.homepage      = "https://github.com/Robincheptileh/rword"
-  spec.source        = "https://github.com/Robincheptileh/rword"
+  spec.metadata[:origin_repository_url] = "https://github.com/Robincheptileh/rword"
   spec.license       = "MIT"
 
   spec.required_ruby_version = '>= 1.9'
