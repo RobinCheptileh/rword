@@ -14,17 +14,24 @@ require 'rword'
 # IRB.start(__FILE__)
 if ARGV.length == 3
   english = case ARGV[2].downcase
-            when 'true' then
-              true
-            when 'false' then
-              false
-            else
-              true
+            when 'true' then true
+            when 'false' then false
+            else true
             end
   puts Rword.generate(ARGV[0].strip, ARGV[1].strip.to_i, english)
 elsif ARGV.length == 2
   puts Rword.generate(ARGV[0].strip, ARGV[1].strip.to_i)
+elsif ARGV.length == 1
+  if %w[-v --v -version --version].include? ARGV[0].downcase
+    puts "rword v#{Rword::VERSION} (#{RUBY_ENGINE} #{RUBY_VERSION}p#{RUBY_PATCHLEVEL}) [#{RUBY_PLATFORM}]"
+  else
+    ask
+  end
 else
+  ask
+end
+
+def ask
   ARGV.clear
   print 'Enter word: '
   letters = gets.strip
@@ -33,12 +40,9 @@ else
   print 'Generate English words only? [Y/N]'
   choice = gets.strip.downcase
   english_only = case choice
-                 when 'y' then
-                   true
-                 when 'n' then
-                   false
-                 else
-                   true
+                 when 'y' then true
+                 when 'n' then false
+                 else true
                  end
   puts Rword.generate(letters, limit, english_only)
 end
