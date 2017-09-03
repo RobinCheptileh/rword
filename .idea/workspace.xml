@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31d1868a-2a54-4fde-bd63-db1016f4e9dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rword" afterPath="$PROJECT_DIR$/bin/rword" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rword/version.rb" afterPath="$PROJECT_DIR$/lib/rword/version.rb" />
-    </list>
+    <list default="true" id="31d1868a-2a54-4fde-bd63-db1016f4e9dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -487,7 +482,7 @@
       <workItem from="1504194909173" duration="28000" />
       <workItem from="1504200892651" duration="79000" />
       <workItem from="1504430657980" duration="970000" />
-      <workItem from="1504433339559" duration="1134000" />
+      <workItem from="1504433339559" duration="1362000" />
     </task>
     <servers />
   </component>
@@ -497,7 +492,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18222000" />
+    <option name="totallyTimeSpent" value="18450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1440" height="870" extended-state="6" />
