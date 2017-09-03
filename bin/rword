@@ -12,6 +12,23 @@ require 'rword'
 
 # require "irb"
 # IRB.start(__FILE__)
+
+def ask
+  ARGV.clear
+  print 'Enter word: '
+  letters = gets.strip
+  print 'Enter limit: '
+  limit = gets.strip.to_i
+  print 'Generate English words only? [Y/N]'
+  choice = gets.strip.downcase
+  english_only = case choice
+                   when 'y' then true
+                   when 'n' then false
+                   else true
+                 end
+  puts Rword.generate(letters, limit, english_only)
+end
+
 if ARGV.length == 3
   english = case ARGV[2].downcase
             when 'true' then true
@@ -29,20 +46,4 @@ elsif ARGV.length == 1
   end
 else
   ask
-end
-
-def ask
-  ARGV.clear
-  print 'Enter word: '
-  letters = gets.strip
-  print 'Enter limit: '
-  limit = gets.strip.to_i
-  print 'Generate English words only? [Y/N]'
-  choice = gets.strip.downcase
-  english_only = case choice
-                 when 'y' then true
-                 when 'n' then false
-                 else true
-                 end
-  puts Rword.generate(letters, limit, english_only)
 end
