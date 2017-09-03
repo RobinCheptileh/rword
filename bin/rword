@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "rword"
+require 'bundler/setup'
+require 'rword'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -21,9 +21,9 @@ if ARGV.length == 3
             else
               true
             end
-  puts Rword::Worder.generate(ARGV[0].strip, ARGV[1].strip.to_i, english)
+  puts Rword.generate(ARGV[0].strip, ARGV[1].strip.to_i, english)
 elsif ARGV.length == 2
-  puts Rword::Worder.generate(ARGV[0].strip, ARGV[1].strip.to_i)
+  puts Rword.generate(ARGV[0].strip, ARGV[1].strip.to_i)
 else
   ARGV.clear
   print 'Enter word: '
@@ -40,5 +40,5 @@ else
                  else
                    true
                  end
-  puts Rword::Worder.generate(letters, limit, english_only)
+  puts Rword.generate(letters, limit, english_only)
 end

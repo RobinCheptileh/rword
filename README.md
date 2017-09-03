@@ -27,7 +27,7 @@ Or install it yourself as:
 ```ruby
 require 'rword'
 
-robin = Rword::Worder.generate('robin', 3, true)
+robin = Rword.generate('robin', 3, true)
 
 # => ["rob", "orb", "nor", "obi", "rib", "bio", "bon", "ion", "bin", "nib"]
 ```
